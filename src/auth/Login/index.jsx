@@ -1,17 +1,17 @@
-import { Box } from "@mui/material"
+import { Box, Button, TextField } from "@mui/material"
 import { Root } from "../../styles/Root"
+import { CssLoginStyles } from "./styles"
 
 export const Login = () => {
     return (
-        <Box sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '100vw',
-            height: '100vh',
-            backgroundColor: Root.background1
-        }}>
-            Hello word!!
-        </Box>
+        <CssLoginStyles.container>
+            Insira seu código de acesso!!             <TextField />
+            <Button sx={{
+                color: Root.primary,
+                backgroundColor: Root.pastelPrimary
+            }}>
+                ENTRAR
+            </Button>
+        </CssLoginStyles.container>
     )
 }
